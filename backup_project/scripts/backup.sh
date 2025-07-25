@@ -44,6 +44,9 @@ log_action "COPYING: $FILE from work to backup directory"
 # Perform copy and log result
 if cp "../data/work/$FILE" "../data/backup/$FILENAME-$DATE.$EXTENSION" 2>> "$LOG_FILE"; then
     log_action "SUCCESS: File copied to ../data/backup/$FILENAME-$DATE.$EXTENSION"
+    rm -r "../data/work/$FILE"
+    log_action "File $FILE deleted from work directory"
+
 else
     log_action "ERROR: Failed to copy $FILE to backup directory"
     exit 1
