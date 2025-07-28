@@ -22,7 +22,7 @@ def create_dataframe():
 def generate_html_report(dataframe):
     print("Generating HTML dailyreport...")
     timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
-    output_file = daily_reports_directory +  "_daily-report_" + timestamp + ".html"
+    output_file = daily_reports_directory +  "daily-report_" + timestamp + ".html"
     
     os.makedirs(daily_reports_directory, exist_ok=True)
 
@@ -63,3 +63,4 @@ if __name__ == "__main__":
         generate_html_report(df)
     else:
         print("No files found to process")
+        generate_html_report(pd.DataFrame({'FileName': [], 'FileType': [], 'CreationDate': []}))

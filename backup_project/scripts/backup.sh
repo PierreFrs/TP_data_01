@@ -11,7 +11,8 @@ LOG_FILE="../logs/backup_logs-$DATE.txt"
 # Function to log with timestamp
 log_action() {
     local message="$1"
-    local timestamp=$(date +"%Y-%m-%d %H:%M:%S")
+    timestamp=$(date +"%Y-%m-%d %H:%M:%S")
+    local timestamp
     echo "[$timestamp] - $message" >> "$LOG_FILE"
 }
 
