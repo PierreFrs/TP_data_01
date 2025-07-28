@@ -1,9 +1,4 @@
 #!/bin/bash
 
+./backup-reporting-job-cron.sh
 ./watch.sh
-
-while true 
-do
-    python3 ./daily_report.py
-    sleep 86400
-done

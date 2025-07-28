@@ -14,7 +14,7 @@ mkdir -p ../data/reports/json
 mkdir -p ../data/work
 
 echo "Giving execution rights to scripts..."
-chmod 755 ./analyze.py ./archive.sh ./backup.sh ./daily_report.py ./watch.sh
+chmod 755 ./analyze.py ./archive.sh ./backup.sh ./daily_report.py ./watch.sh ./startup.sh ./backup-reporting-job-cron.sh
 
 echo "verifyng python3 installation..."
 if command -v python3 &> /dev/null; then
