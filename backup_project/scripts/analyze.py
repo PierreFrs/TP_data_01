@@ -58,14 +58,14 @@ def generate_reports(data, filename):
 def generate_json_report(data : DataFrame, filename):
     print("Generating JSON reports...")
     timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
-    output_file = base_json_output_url + filename.split(".")[0] + "_" + timestamp + ".json"
+    output_file = base_json_output_url + filename.split(".")[0] + "_" + filename.split(".")[1] + "_" + timestamp + ".json"
     with open(output_file, "w", encoding="utf-8") as file:
         file.write(data.to_json(indent=2))
 
 def generate_html_report(data : DataFrame, filename):
     print("Generating HTML reports...")
     timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
-    output_file = base_html_output_url + filename.split(".")[0] + "_" + timestamp + ".html"
+    output_file = base_html_output_url + filename.split(".")[0] + "_" + filename.split(".")[1] + "_" + timestamp + ".html"
     with open(output_file, "w", encoding="utf-8") as file:
         file.write(data.to_html())
 
