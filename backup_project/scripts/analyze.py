@@ -25,7 +25,8 @@ def analyze_file(filename):
 
 def analyze_csv(filename):
     print("Analyzing csv file...")
-    df = pd.read_csv(base_input_url + filename, sep=",")
+    file_url = base_input_url + filename
+    df = pd.read_csv(file_url)
     stats = df.describe()
     generate_reports(stats, filename)
 
