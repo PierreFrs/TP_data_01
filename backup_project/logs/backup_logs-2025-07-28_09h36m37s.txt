@@ -1,8 +1,0 @@
-[2025-07-28 09:36:37] - STARTED: Archive script for file: ../data/work/test.txt
-[2025-07-28 09:36:37] - ANALYZING: Running Python analysis on ../data/work/test.txt (text/csv file)
-Analyzing file...
-Analyzing txt file...
-[2025-07-28 09:36:37] - COMPLETED: Python analysis written to ../logs/backup_logs-2025-07-28_09h36m37s.txt
-[2025-07-28 09:36:37] - COPYING: ../data/work/test.txt from work to backup directory
-cp: cannot stat '../data/work/../data/work/test.txt': No such file or directory
-[2025-07-28 09:36:37] - ERROR: Failed to copy ../data/work/test.txt to backup directory

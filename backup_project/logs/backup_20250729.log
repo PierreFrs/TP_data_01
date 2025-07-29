@@ -1,0 +1,135 @@
+2025-07-29 10:03:16 - Demarrage du processus de backup
+2025-07-29 10:03:16 - Sauvegardé : log_test.txt -> _
+2025-07-29 10:03:16 - Analyse du fichier : log_test.txt
+2025-07-29 10:03:16 - Sauvegardé : ventes_test.csv -> _
+2025-07-29 10:03:16 - Analyse du fichier : ventes_test.csv
+2025-07-29 10:03:16 - === resumé ===
+2025-07-29 10:03:16 - Fichiers sauvegardés : 2
+2025-07-29 10:03:16 - Taille total 0 octets
+2025-07-29 10:03:16 - Fin du processus
+2025-07-29 10:04:42 - Demarrage du processus de backup
+2025-07-29 10:04:42 - Sauvegardé : log_test.txt -> 20250729_100442_log_test.txt
+2025-07-29 10:04:42 - Analyse du fichier : log_test.txt
+2025-07-29 10:04:42 - Sauvegardé : ventes_test.csv -> 20250729_100442_ventes_test.csv
+2025-07-29 10:04:42 - Analyse du fichier : ventes_test.csv
+2025-07-29 10:04:42 - === resumé ===
+2025-07-29 10:04:42 - Fichiers sauvegardés : 2
+2025-07-29 10:04:42 - Taille total 0 octets
+2025-07-29 10:04:42 - Fin du processus
+2025-07-29 10:05:41 - Demarrage du processus de backup
+2025-07-29 10:05:41 - Sauvegardé : log_test.txt -> 20250729_100541_log_test.txt
+2025-07-29 10:05:41 - Analyse du fichier : log_test.txt
+2025-07-29 10:05:41 - Sauvegardé : ventes_test.csv -> 20250729_100541_ventes_test.csv
+2025-07-29 10:05:41 - Analyse du fichier : ventes_test.csv
+2025-07-29 10:05:41 - === resumé ===
+2025-07-29 10:05:41 - Fichiers sauvegardés : 2
+2025-07-29 10:05:41 - Taille total 485 octets
+2025-07-29 10:05:41 - Fin du processus
+2025-07-29 10:06:17 - Demarrage du processus de backup
+2025-07-29 10:06:17 - Sauvegardé : log_test.txt -> 20250729_100617_log_test.txt
+2025-07-29 10:06:17 - Analyse du fichier : log_test.txt
+2025-07-29 10:06:17 - Sauvegardé : ventes_test.csv -> 20250729_100617_ventes_test.csv
+2025-07-29 10:06:17 - Analyse du fichier : ventes_test.csv
+2025-07-29 10:06:17 - === resumé ===
+2025-07-29 10:06:17 - Fichiers sauvegardés : 2
+2025-07-29 10:06:17 - Taille total 485 octets
+2025-07-29 10:06:17 - Fin du processus
+2025-07-29 10:08:01 - Demarrage du processus de backup
+2025-07-29 10:08:01 - Sauvegardé : log_test.txt -> 20250729_100801_log_test.txt
+2025-07-29 10:08:01 - Analyse du fichier : log_test.txt
+2025-07-29 10:08:01 - Sauvegardé : ventes_test.csv -> 20250729_100801_ventes_test.csv
+2025-07-29 10:08:01 - Analyse du fichier : ventes_test.csv
+2025-07-29 10:08:01 - === resumé ===
+2025-07-29 10:08:01 - Fichiers sauvegardés : 2
+2025-07-29 10:08:01 - Taille total 485 octets
+2025-07-29 10:08:01 - Fin du processus
+2025-07-29 10:08:31 - Demarrage du processus de backup
+2025-07-29 10:08:31 - Sauvegardé : log_test.txt -> 20250729_100831_log_test.txt
+2025-07-29 10:08:31 - Analyse du fichier : log_test.txt
+2025-07-29 10:08:31 - Sauvegardé : ventes_test.csv -> 20250729_100831_ventes_test.csv
+2025-07-29 10:08:31 - Analyse du fichier : ventes_test.csv
+2025-07-29 10:08:31 - === resumé ===
+2025-07-29 10:08:31 - Fichiers sauvegardés : 2
+2025-07-29 10:08:31 - Taille total 485 octets
+2025-07-29 10:08:31 - Fin du processus
+2025-07-29 10:09:01 - Demarrage du processus de backup
+2025-07-29 10:09:01 - Sauvegardé : log_test.txt -> 20250729_100901_log_test.txt
+2025-07-29 10:09:01 - Analyse du fichier : log_test.txt
+2025-07-29 10:09:01 - Sauvegardé : ventes_test.csv -> 20250729_100901_ventes_test.csv
+2025-07-29 10:09:01 - Analyse du fichier : ventes_test.csv
+2025-07-29 10:09:01 - === resumé ===
+2025-07-29 10:09:01 - Fichiers sauvegardés : 2
+2025-07-29 10:09:01 - Taille total 485 octets
+2025-07-29 10:09:01 - Fin du processus
+2025-07-29 10:09:31 - Demarrage du processus de backup
+2025-07-29 10:09:31 - Sauvegardé : log_test.txt -> 20250729_100931_log_test.txt
+2025-07-29 10:09:31 - Analyse du fichier : log_test.txt
+2025-07-29 10:09:31 - Sauvegardé : ventes_test.csv -> 20250729_100931_ventes_test.csv
+2025-07-29 10:09:31 - Analyse du fichier : ventes_test.csv
+2025-07-29 10:09:31 - === resumé ===
+2025-07-29 10:09:31 - Fichiers sauvegardés : 2
+2025-07-29 10:09:31 - Taille total 485 octets
+2025-07-29 10:09:31 - Fin du processus
+2025-07-29 10:10:59 - Demarrage du processus de backup
+2025-07-29 10:10:59 - Sauvegardé : log_test.txt -> 20250729_101059_log_test.txt
+2025-07-29 10:10:59 - Analyse du fichier : log_test.txt
+2025-07-29 10:10:59 - Sauvegardé : ventes_test.csv -> 20250729_101059_ventes_test.csv
+2025-07-29 10:10:59 - Analyse du fichier : ventes_test.csv
+2025-07-29 10:10:59 - === resumé ===
+2025-07-29 10:10:59 - Fichiers sauvegardés : 2
+2025-07-29 10:10:59 - Taille total 485 octets
+2025-07-29 10:10:59 - Fin du processus
+2025-07-29 10:10:31 - Demarrage du processus de backup
+2025-07-29 10:10:31 - Sauvegardé : log_test.txt -> 20250729_101031_log_test.txt
+2025-07-29 10:10:31 - Analyse du fichier : log_test.txt
+2025-07-29 10:10:31 - Sauvegardé : ventes_test.csv -> 20250729_101031_ventes_test.csv
+2025-07-29 10:10:31 - Analyse du fichier : ventes_test.csv
+2025-07-29 10:10:31 - === resumé ===
+2025-07-29 10:10:31 - Fichiers sauvegardés : 2
+2025-07-29 10:10:31 - Taille total 485 octets
+2025-07-29 10:10:31 - Fin du processus
+2025-07-29 10:11:01 - Demarrage du processus de backup
+2025-07-29 10:11:01 - Sauvegardé : log_test.txt -> 20250729_101101_log_test.txt
+2025-07-29 10:11:01 - Analyse du fichier : log_test.txt
+2025-07-29 10:11:01 - Sauvegardé : ventes_test.csv -> 20250729_101101_ventes_test.csv
+2025-07-29 10:11:01 - Analyse du fichier : ventes_test.csv
+2025-07-29 10:11:01 - === resumé ===
+2025-07-29 10:11:01 - Fichiers sauvegardés : 2
+2025-07-29 10:11:01 - Taille total 485 octets
+2025-07-29 10:11:01 - Fin du processus
+2025-07-29 10:11:31 - Demarrage du processus de backup
+2025-07-29 10:11:31 - Sauvegardé : log_test.txt -> 20250729_101131_log_test.txt
+2025-07-29 10:11:31 - Analyse du fichier : log_test.txt
+2025-07-29 10:11:31 - Sauvegardé : ventes_test.csv -> 20250729_101131_ventes_test.csv
+2025-07-29 10:11:31 - Analyse du fichier : ventes_test.csv
+2025-07-29 10:11:31 - === resumé ===
+2025-07-29 10:11:31 - Fichiers sauvegardés : 2
+2025-07-29 10:11:31 - Taille total 485 octets
+2025-07-29 10:11:31 - Fin du processus
+2025-07-29 10:12:01 - Demarrage du processus de backup
+2025-07-29 10:12:01 - Sauvegardé : log_test.txt -> 20250729_101201_log_test.txt
+2025-07-29 10:12:01 - Analyse du fichier : log_test.txt
+2025-07-29 10:12:01 - Sauvegardé : ventes_test.csv -> 20250729_101201_ventes_test.csv
+2025-07-29 10:12:01 - Analyse du fichier : ventes_test.csv
+2025-07-29 10:12:01 - === resumé ===
+2025-07-29 10:12:01 - Fichiers sauvegardés : 2
+2025-07-29 10:12:01 - Taille total 485 octets
+2025-07-29 10:12:01 - Fin du processus
+2025-07-29 10:12:31 - Demarrage du processus de backup
+2025-07-29 10:12:31 - Sauvegardé : log_test.txt -> 20250729_101231_log_test.txt
+2025-07-29 10:12:31 - Analyse du fichier : log_test.txt
+2025-07-29 10:12:31 - Sauvegardé : ventes_test.csv -> 20250729_101231_ventes_test.csv
+2025-07-29 10:12:31 - Analyse du fichier : ventes_test.csv
+2025-07-29 10:12:31 - === resumé ===
+2025-07-29 10:12:31 - Fichiers sauvegardés : 2
+2025-07-29 10:12:31 - Taille total 485 octets
+2025-07-29 10:12:31 - Fin du processus
+2025-07-29 10:13:01 - Demarrage du processus de backup
+2025-07-29 10:13:01 - Sauvegardé : log_test.txt -> 20250729_101301_log_test.txt
+2025-07-29 10:13:01 - Analyse du fichier : log_test.txt
+2025-07-29 10:13:01 - Sauvegardé : ventes_test.csv -> 20250729_101301_ventes_test.csv
+2025-07-29 10:13:01 - Analyse du fichier : ventes_test.csv
+2025-07-29 10:13:01 - === resumé ===
+2025-07-29 10:13:01 - Fichiers sauvegardés : 2
+2025-07-29 10:13:01 - Taille total 485 octets
+2025-07-29 10:13:01 - Fin du processus

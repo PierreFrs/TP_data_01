@@ -1,7 +1,0 @@
-[2025-07-25 15:01:39] - STARTED: Archive script for file: test.txt
-[2025-07-25 15:01:39] - CREATED: Stats log file: ../logs/file_stats-2025-07-25_15h01m39s.txt
-[2025-07-25 15:01:39] - ANALYZING: Running Python analysis on test.txt (text/csv file)
-[2025-07-25 15:01:39] - COMPLETED: Python analysis written to ../logs/file_stats-2025-07-25_15h01m39s.txt
-[2025-07-25 15:01:39] - COPYING: test.txt from work to backup directory
-[2025-07-25 15:01:40] - SUCCESS: File copied to ../data/backup/test-2025-07-25_15h01m39s.txt
-[2025-07-25 15:01:40] - FINISHED: Archive script completed for test.txt

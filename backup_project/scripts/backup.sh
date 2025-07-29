@@ -1,56 +1,52 @@
 #!/bin/bash
 
-FILE=$1
-FILENAME="${FILE%.*}"
-EXTENSION="${FILE##*.}"
-DATE=$(date +"%Y-%m-%d_%Hh%Mm%Ss")
+echo "=== Debut de la sauvegarde ==="
 
-# Log file paths
-LOG_FILE="../logs/backup_logs-$DATE.txt"
+WORK_DIR="data/work"
+BACKUP_DIR="data/backup"
+REPORTS_DIR="data/reports"
+LOG_FILE="logs/backup_$(date +%Y%m%d).log"
 
-# Function to log with timestamp
-log_action() {
-    local message="$1"
-    timestamp=$(date +"%Y-%m-%d %H:%M:%S")
-    local timestamp
-    echo "[$timestamp] - $message" >> "$LOG_FILE"
+log_message(){
+    echo "$(date '+%Y-%m-%d %H:%M:%S') - $1" | tee -a "$LOG_FILE"
 }
 
-# Create logs directory if it doesn't exist
-mkdir -p ../logs
+log_message "Demarrage du processus de backup"
 
-# Log script start
-log_action "STARTED: Archive script for file: $FILE"
+files_backed_up=0
+total_size=0
 
-# Create stats file and log the action
-if [ ! -f "$LOG_FILE" ]; then
-    touch "$LOG_FILE"
-    log_action "CREATED: Stats log file: $LOG_FILE"
-fi
+for file in "$WORK_DIR"/*;do
 
-# Analyze files and log the action
-if [ "$EXTENSION" != "txt" ] && [ "$EXTENSION" != "csv" ]; then
-    log_action "ANALYZING: Running stat command on $FILE (non-text file)"
-    stat "../data/work/$FILE" >> "$LOG_FILE"
-    log_action "COMPLETED: Stat analysis written to $LOG_FILE"
-else
-    log_action "ANALYZING: Running Python analysis on $FILE (text/csv file)"
-    python3 analyze.py "$FILE" >> "$LOG_FILE"
-    log_action "COMPLETED: Python analysis written to $LOG_FILE"
-fi
+    if [ -f "$file" ];then
+    
+        filename=$(basename "$file")
+        timestamp=$(date +%Y%m%d_%H%M%S)
+        backup_name="${timestamp}_${filename}"
 
-# Log the copy operation
-log_action "COPYING: $FILE from work to backup directory"
+        cp "$file" "$BACKUP_DIR/$backup_name"
 
-# Perform copy and log result
-if cp "../data/work/$FILE" "../data/backup/$FILENAME-$DATE.$EXTENSION" 2>> "$LOG_FILE"; then
-    log_action "SUCCESS: File copied to ../data/backup/$FILENAME-$DATE.$EXTENSION"
-    rm -r "../data/work/$FILE"
-    log_action "File $FILE deleted from work directory"
+        size=$(stat -f%z "$file" 2>/dev/null || stat -c%s "$file" 2>/dev/null || echo 0)
+        total_size=$((total_size + size))
+        files_backed_up=$((files_backed_up + 1))
 
-else
-    log_action "ERROR: Failed to copy $FILE to backup directory"
-    exit 1
-fi
+        log_message "Sauvegardé : $filename -> $backup_name"
 
-log_action "FINISHED: Archive script completed for $FILE"
+        if [[ "$filename" =~ \.(csv|txt)$ ]]; then
+            log_message "Analyse du fichier : $filename"
+            python3 scripts/analyze.py "$file" "$REPORTS_DIR"
+        fi
+    
+    fi
+
+done
+
+find "$BACKUP_DIR" -type f -mtime +30 -delete 2>/dev/null
+
+log_message "=== resumé ==="
+log_message "Fichiers sauvegardés : $files_backed_up"
+log_message "Taille total $total_size octets"
+log_message "Fin du processus"
+
+echo "Sauvegarde terminée - $files_backed_up fichier(s) traité(s)"
+

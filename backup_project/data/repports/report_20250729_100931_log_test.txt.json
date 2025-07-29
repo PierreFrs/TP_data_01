@@ -1,0 +1,30 @@
+{
+  "type": "TXT",
+  "filename": "log_test.txt",
+  "timestamp": "2025-07-29 10:09:31",
+  "total_chars": 331,
+  "total_lines": 14,
+  "total_words": 39,
+  "top_words": [
+    [
+      "serveur",
+      2
+    ],
+    [
+      "rapport",
+      1
+    ],
+    [
+      "d'activité",
+      1
+    ],
+    [
+      "============================",
+      1
+    ],
+    [
+      "fonctionné",
+      1
+    ]
+  ]
+}

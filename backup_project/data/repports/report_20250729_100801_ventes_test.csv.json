@@ -1,0 +1,15 @@
+{
+  "type": "CSV",
+  "filename": "ventes_test.csv",
+  "timestamp": "2025-07-29 10:08:01",
+  "total_lines": 5,
+  "columns": 4,
+  "header": [
+    "date",
+    "produit",
+    "quantite",
+    "prix"
+  ],
+  "data_lines": 4,
+  "empty_lines": 0
+}

@@ -1,3 +1,0 @@
-[2025-07-25 15:09:41] - Creating archive: ../data/archives/backup-2025-07-25_15h09m41s.tar.gz
-[2025-07-25 15:09:41] - Archive created successfully. Cleaning backup directory...
-[2025-07-25 15:09:41] - Backup directory cleaned.

@@ -1,86 +1,47 @@
-#! /bin/bash
+echo "=== Instalation du systeme de sauvegarde de fichiers ==="
 
-echo "Begin the installation of the backup system"
-echo "Creating necessary directories..."
-mkdir -p ../logs
-mkdir -p ../data
-mkdir -p ../data/archives
-mkdir -p ../data/backup
-mkdir -p ../data/mock_data
-mkdir -p ../data/reports
-mkdir -p ../data/reports/daily
-mkdir -p ../data/reports/html
-mkdir -p ../data/reports/json
-mkdir -p ../data/work
+mkdir -p data/{work,backup,reports} logs 
 
-echo "Giving execution rights to scripts..."
-chmod 755 ./analyze.py ./archive.sh ./backup.sh ./daily_report.py ./watch.sh ./startup.sh ./backup-reporting-job-cron.sh
+chmod +x scripts/*.sh scripts/*.py
 
-echo "verifyng python3 installation..."
-if command -v python3 &> /dev/null; then
-    echo "Python3 is already installed: $(python3 --version)"
-
-    echo "Checking for required Python packages..."
-    if python3 -c "import pandas" &> /dev/null; then
-        echo "Pandas is already installed..."
-    else
-        echo "Installing Pandas..."
-        pip install pandas
-    fi
-
-    PYTHON_OK=true
-
-else
-    echo "Python3 is not installed on this system."
-    read -pr "Do you want to install Python3? (Y/N): " confirm
-    
-    if [[ $confirm == [yY] || $confirm == [yY][eE][sS] ]]; then
-        echo "Installing Python3..."
-        
-        # Install based on system
-        if command -v apt-get &> /dev/null; then
-            sudo apt-get update && sudo apt-get install -y python3 python3-pip
-        elif command -v yum &> /dev/null; then
-            sudo yum install -y python3 python3-pip
-        elif command -v brew &> /dev/null; then
-            brew install python3
-        else
-            echo "Please install Python3 manually for your system."
-            exit 1
-        fi
-        
-        echo "Installing required Python packages..."
-        pip3 install pandas
-        
-        echo "Python3 installed successfully!"
-        PYTHON_OK=true
-    else
-        echo "Python3 is required for this system. Installation cancelled."
-        exit 1
-    fi
+if ! python3 -c "import json, os, sys" 2>/dev/null; then
+    echo "Python3 requis"
+    exit  1
 fi
 
-if [[ $PYTHON_OK == true ]]; then
-    echo "Creating test_files..."
-    touch "../data/mock_data/test.csv"
-    touch "../data/mock_data/test.txt"
+echo "📄 Création de fichiers de test..."
 
-    echo "'then','exercise','duty','we','mouse','slide'
-    'she','spread','about','everything','meat','touch'
-    'with','result','answer','map','how','telephone'
-    'upper','strange','mother','joy','pilot','throughout'
-    'without','simple','too','room','popular','pilot'
-    'tip','western','four','molecular','locate','neck'
-    'poem','development','gulf','forgot','purple','deer'" > "../data/mock_data/test.csv"
-    echo "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." > "../data/mock_data/test.txt"
+# Fichier CSV de test
+cat > data/work/ventes_test.csv << 'EOF'
+date,produit,quantite,prix
+2024-01-15,Produit_A,10,25.50
+2024-01-15,Produit_B,5,15.00
+2024-01-16,Produit_A,8,25.50
+2024-01-16,Produit_C,12,35.75
+EOF
 
-    cp "../data/mock_data/test.csv" "../data/work/"
-    cp "../data/mock_data/test.txt" "../data/work/"
+# Fichier TXT de test  
+cat > data/work/log_test.txt << 'EOF'
+Rapport d'activité du serveur
+============================
 
-    echo "Installation completed successfully!"
-    echo "Test files created in ../data/work/ directory"
-    echo "You can start the program by typing './startup.sh' in the installation directory."
-else
-    echo "Installation failed due to Python3 requirements."
-    exit 1
-fi
+Le serveur a fonctionné correctement aujourd'hui.
+Aucune erreur critique détectée.
+Performances optimales maintenues.
+
+Statistiques:
+- Requêtes traitées: 1250
+- Temps de réponse moyen: 45ms
+- Erreurs: 0
+
+Le système fonctionne parfaitement.
+Maintenance programmée demain.
+EOF
+
+echo "Installation terminée"
+echo ""
+echo "Pour commencer :"
+echo "1. ./scripts/backup.sh pour une sauvegarde ponctuelle"
+echo "2. ./scripts/watch.sh pour lancer la surveillance du dossier work"
+echo "3. python scripts/daily_report.py pour un rapport quotidien"
+

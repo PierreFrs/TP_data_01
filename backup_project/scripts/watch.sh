@@ -1,20 +1,22 @@
 #!/bin/bash
 
-DIRECTORY="../data/work/"
+echo "=== Mode Surveillance Activé ==="
 
-while true
-do
-    echo "Checking work directory..."
-    if [ "$(ls -A $DIRECTORY 2>/dev/null)" ]; then
-        echo "Files detected, launching jobs..."
-        for f in "$DIRECTORY"*.* ; do
-            [[ -e "$f" ]] || break
-            filename=$(basename "$f")
-            echo "Processing: $filename"
-            ./backup.sh "$filename"
-        done
-    else
-        echo "No file detected in work directory"
+WATCH_INTERVAL=30
+SCRIPT_DIR="$(dirname "$0")"
+
+while true; do
+
+    echo " $(date '+%H:%M:%S') - verification des nouveaux fichiers ..."
+
+
+    file_count=$(find data/work -maxdepth 1 -type f | wc -l)
+
+    if [ $file_count -gt 0 ]; then
+        echo " $file_count fichier(s) detecté(s) - lancement du script de sauvegarde"
+        bash "$SCRIPT_DIR/backup.sh"
     fi
-    sleep 30
+
+    sleep $WATCH_INTERVAL
+
 done

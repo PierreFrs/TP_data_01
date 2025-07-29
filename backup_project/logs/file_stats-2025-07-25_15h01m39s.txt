@@ -1,2 +1,0 @@
-Analyzing test.txt
-[ 2025-07-25_15h01m39s ] - Copy of file test.txt from work directory to backup directory :
